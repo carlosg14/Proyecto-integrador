@@ -1,5 +1,8 @@
 # Proyecto-integrador
 Guía de Actividades Diagnósticas
 
-Integrante: 
-*Carlos Garcia
+|   Integrante   |             Email             | Github |
+|----------------|-------------------------------|-------|
+| Carlos Garcia  | carlos.edu.garcia8@gmail.com  |     |
+
+

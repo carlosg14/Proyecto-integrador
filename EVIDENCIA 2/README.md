@@ -1,60 +1,12 @@
-# Evidencia 2
+# React + Vite
 
-Este proyecto es una aplicación React que consume la API de [DummyJSON](https://dummyjson.com/products) para mostrar productos en tarjetas, utilizando estilos con Tailwind CSS. Incluye una sección de estadísticas dinámicas y búsqueda de productos.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## ¿Cómo se usa?
+Currently, two official plugins are available:
 
-1. **Instala las dependencias**:
-   ```bash
-   npm install
-   ```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. **Inicia el servidor de desarrollo**:
-   ```bash
-   npm run dev
-   ```
+## Expanding the ESLint configuration
 
-3. **Abre el navegador** en [http://localhost:5173](http://localhost:5173)
-
-4. **Busca productos** usando el campo de búsqueda. Las estadísticas y la lista de productos se actualizan automáticamente según el término ingresado.
-
----
-
-## Estadísticas mostradas
-
-La aplicación calcula y muestra dinámicamente las siguientes estadísticas sobre los productos filtrados:
-
-- **Producto más caro**: muestra el nombre y el precio.
-- **Producto más barato**: muestra el nombre y el precio.
-- **Cantidad de productos cuyo título tiene más de 20 caracteres**.
-- **Precio total** de todos los productos filtrados.
-- **Promedio de descuento (%)** de los productos filtrados.
-- **Cantidad de productos con stock menor a 50**.
-
-### Estadísticas adicionales agregadas:
-
-- **Cantidad de productos con rating mayor a 4.5**.
-- **Cantidad de productos con descuento mayor al 20%**.
-- **Cantidad de productos de la categoría "smartphones"**.
-
-Todas estas estadísticas se recalculan automáticamente al buscar productos.
-
----
-
-## Estructura del código y componentes
-
-El código está dividido en componentes funcionales para mayor claridad y reutilización:
-
-- **App.jsx**: Componente principal. Se encarga de la lógica de búsqueda, obtención de datos y cálculo de estadísticas. Pasa los datos filtrados y las estadísticas como props a los componentes hijos.
-- **componentes/Panel.jsx**: Muestra todas las estadísticas recibidas como props en tarjetas estilizadas.
-- **componentes/Lista.jsx**: Muestra la lista de productos filtrados en tarjetas, también estilizadas con Tailwind CSS.
-
----
-
-## Tecnologías usadas
-
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Axios](https://axios-http.com/)
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

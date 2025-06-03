@@ -9,9 +9,15 @@ function App() {
     const [search, setSearch] = useState("");
     const [show, setShow] = useState(true);
     const containerRef = useRef(null);
+    const [dark, setdark] = useState(false);
+    const toggleDark = () => {
+        setdark(!dark);
+        containerRef.current.classList.toggle('dark-mode');
+    };
+
 
     useEffect(() => {
-        axios.get("https://dummyjson.com/products").then((res) => {
+        axios.get("https://dummyjson.com/products?limit=100").then((res) => {
             setProducts(res.data.products);
         });
     }, []);
@@ -42,8 +48,9 @@ function App() {
             : 0;
 
     return (
-        <div ref={containerRef} className="p-4">
+        <div ref={containerRef}>
             <h1 className="text-3xl font-bold text-blue-600 mb-4">¡Hola!</h1>
+            <button onClick={toggleDark}>activar modo {dark ? 'claro': 'oscuro'}</button>
             <input
                 type="text"
                 placeholder="Buscar producto"

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import ProductList from "./components/ProductList";
 import StatsPanel from "./components/StatsPanel";
+import Stats from "./components/Stats";
 import "./App.css";
 
 function App() {
@@ -80,6 +81,15 @@ function App() {
                 />
             )}
             {filteredProducts.length === 0 && <div>No se encontraron productos</div>}
+
+            {show && (
+                <Stats
+                    total={totalProducts}
+                    max={maxProduct}
+                    min={minProduct}
+                />
+            )}
+            
         </div>
     );
 }
